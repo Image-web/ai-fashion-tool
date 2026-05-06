@@ -9,19 +9,9 @@ from io import BytesIO
 # =====================
 # CONFIG
 # =====================
-# =========================
-# OpenAI
-# =========================
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-
-
-# =========================
-# Supabase
-# =========================
-supabase = create_client(
-    st.secrets["SUPABASE_URL"],
-    st.secrets["SUPABASE_KEY"]
-)
+SUPABASE_URL = "https://yeurbbmwcartkoimcfch.supabase.co/rest/v1/"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlldXJiYm13Y2FydGtvaW1jZmNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwMzIwNzksImV4cCI6MjA5MzYwODA3OX0.88iWmZB7GLKirJfX3hqOtN2y1nHgIHauOr22EGghzIs"
+OPENAI_API_KEY = "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" 
 bucket = supabase.storage.from_("fashion-images")
 
 # =====================
